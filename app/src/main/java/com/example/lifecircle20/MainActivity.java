@@ -14,7 +14,7 @@ import com.example.lifecircle20.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static boolean userStatus;
+    public static boolean userStatus = false;
 
     private ActivityMainBinding binding;
 

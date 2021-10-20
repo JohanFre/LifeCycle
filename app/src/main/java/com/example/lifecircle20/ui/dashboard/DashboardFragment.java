@@ -1,6 +1,7 @@
 package com.example.lifecircle20.ui.dashboard;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,21 +53,22 @@ public class DashboardFragment extends Fragment {
                 }
             });
 
-            saveDataBtn = (Button) root.findViewById(R.id.saveData);
-            saveDataBtn.setOnClickListener(this::onClick);
-            inputFirstName = (EditText) root.findViewById(R.id.inputFirstName);
-            inputLastName = (EditText) root.findViewById(R.id.inputLastName);
-            inputAddress = (EditText) root.findViewById(R.id.inputAddress);
-            inputCity = (EditText) root.findViewById(R.id.inputCity);
-            inputCountry = (EditText) root.findViewById(R.id.inputCountry);
+                saveDataBtn = (Button) root.findViewById(R.id.saveData);
+                saveDataBtn.setOnClickListener(this::onClick);
+                inputFirstName = (EditText) root.findViewById(R.id.inputFirstName);
+                inputLastName = (EditText) root.findViewById(R.id.inputLastName);
+                inputAddress = (EditText) root.findViewById(R.id.inputAddress);
+                inputCity = (EditText) root.findViewById(R.id.inputCity);
+                inputCountry = (EditText) root.findViewById(R.id.inputCountry);
 
 
             return root;
         }
 
+
     private void onClick(View view) {
 
-        if(MainActivity.getUserStatus()) {
+        if(MainActivity.userStatus == true) {
             inputFNameText = inputFirstName.getText().toString();
             inputLNameText = inputLastName.getText().toString();
             inputAddressText = inputAddress.getText().toString();

@@ -65,12 +65,10 @@ public class HomeFragment extends Fragment {
 
         if(username.equals("admin") && password.equals("admin") && !MainActivity.getUserStatus()){
             MainActivity.setUserStatus(true);
-            loginButton.setText("Logout");
             Toast.makeText(getContext(), "Logged In", Toast.LENGTH_SHORT).show();
 
         } else if (MainActivity.getUserStatus()){
             MainActivity.setUserStatus(false);
-            loginButton.setText("Login");
             Toast.makeText(getContext(), "Logged Out", Toast.LENGTH_SHORT).show();
         }
 
